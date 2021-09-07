@@ -1,0 +1,665 @@
+{
+	"info": {
+		"_postman_id": "5dd90930-e03b-4d0c-ab1a-9be4fc91bb83",
+		"name": "Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Smith\",\n    \"email\": \"john.smith@gmail.com\",\n    \"password\": \"hunter2\",\n    \"phonenumber\": \"541-758-2077\",\n    \"address\": \"400 SW 2nd St.\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /users/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "60be66df6d3bce20c512135d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.smith@gmail.com\",\n    \"password\": \"hunter2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/60be66df6d3bce20c512135d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"60be66df6d3bce20c512135d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Smith\",\n    \"email\": \"john.smith@gmail.com\",\n    \"password\": \"hunter2\",\n    \"phonenumber\": \"541-758-9999\",\n    \"address\": \"400 SW 2nd St.\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/60be66df6d3bce20c512135d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"60be66df6d3bce20c512135d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /pets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"breed\": \"Golden Retriever\",\n        \"isAdopted\": false,\n        \"description\": \"Very cute, smart, and loving dog!\",\n        \"color\": \"gold\",\n        \"age\": \"3 months\",\n        \"userId\": \"60be66df6d3bce20c512135d\",\n        \"gender\": \"boy\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[check] PUT /pets/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"breed\": \"Golden Retriever\",\n        \"isAdopted\": false,\n        \"description\": \"Very cute, smart!\",\n        \"color\": \"gold\",\n        \"age\": \"3 months\",\n        \"userId\": \"60be66df6d3bce20c512135d\",\n        \"gender\": \"boy\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pets/60be68556d3bce20c512135e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pets",
+						"60be68556d3bce20c512135e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /pets/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pets/60be68556d3bce20c512135e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pets",
+						"60be68556d3bce20c512135e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[check] DELETE /pets/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pets/60be693164211e2102d13859",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pets",
+						"60be693164211e2102d13859"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /photos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "g933AS2pb/gr.jpg"
+						},
+						{
+							"key": "petid",
+							"value": "60be68556d3bce20c512135e",
+							"type": "text"
+						},
+						{
+							"key": "userid",
+							"value": "60be66df6d3bce20c512135d",
+							"type": "text"
+						},
+						{
+							"key": "caption",
+							"value": "testing",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/photos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /photos/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/photos/60be6f87a0e54622998d081f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photos",
+						"60be6f87a0e54622998d081f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /media/image/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/media/images/f5e393a36023dc1e22a2a855e7728800.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"media",
+						"images",
+						"f5e393a36023dc1e22a2a855e7728800.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[check] DELETE /photo/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/photos/60be6cfd0f906721d55f4df2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photos",
+						"60be6cfd0f906721d55f4df2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[check] PUT /photo/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userid\" : \"60be66df6d3bce20c512135d\", \n    \"caption\" : \"testing2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/photos/60be68556d3bce20c512135e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photos",
+						"60be68556d3bce20c512135e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /chatrooms",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"kevin.le@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chatrooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatrooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /chatrooms/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chatrooms/60be7033a0e54622998d0822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatrooms",
+						"60be7033a0e54622998d0822"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /chatrooms/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNjZkZjZkM2JjZTIwYzUxMjEzNWQiLCJpYXQiOjE2MjMwOTEwODYsImV4cCI6MTYyMzE3NzQ4Nn0.ZQwGHqvlZaR0t3TkmLO5aqolxLGskjPkKCwFCU5J_LM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/chatrooms/60be7033a0e54622998d0822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatrooms",
+						"60be7033a0e54622998d0822"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /chatrooms/:id [unauthenticated user]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNzBkNGEwZTU0NjIyOTk4ZDA4MjMiLCJpYXQiOjE2MjMwOTM0ODQsImV4cCI6MTYyMzE3OTg4NH0.P3x6-LAZ3I0m3H2PS_nIS6Otram1X7Yo_Gp8AA54Ztg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chatrooms/60be7033a0e54622998d0822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatrooms",
+						"60be7033a0e54622998d0822"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /chatrooms/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNzAxNmEwZTU0NjIyOTk4ZDA4MjEiLCJpYXQiOjE2MjMwOTM2OTEsImV4cCI6MTYyMzE4MDA5MX0.-yuei8lFJnveIJCNb-0zV7xCdZhNMYDHy50g3lRvA7M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/chatrooms/60be7033a0e54622998d0822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chatrooms",
+						"60be7033a0e54622998d0822"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /users/:id/pets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNzAxNmEwZTU0NjIyOTk4ZDA4MjEiLCJpYXQiOjE2MjMwOTM2OTEsImV4cCI6MTYyMzE4MDA5MX0.-yuei8lFJnveIJCNb-0zV7xCdZhNMYDHy50g3lRvA7M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/60be7016a0e54622998d0821/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"60be7016a0e54622998d0821",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /users/:id/photos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGJlNzAxNmEwZTU0NjIyOTk4ZDA4MjEiLCJpYXQiOjE2MjMwOTM2OTEsImV4cCI6MTYyMzE4MDA5MX0.-yuei8lFJnveIJCNb-0zV7xCdZhNMYDHy50g3lRvA7M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/60be7016a0e54622998d0821/photos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"60be7016a0e54622998d0821",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

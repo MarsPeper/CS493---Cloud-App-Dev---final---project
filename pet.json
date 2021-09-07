@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "breed": "Golden Retriever",
+        "isAdopted": false,
+        "description": "Very cute, smart, and loving dog!",
+        "color": "gold",
+        "age": "3 months",
+        "userId": 1,
+        "gender": "boy"
+    },
+    {
+        "id": 2,
+        "breed": "German Shepherd",
+        "isAdopted": false,
+        "description": "Smart and intelligent dog!",
+        "color": "black and gold",
+        "age": "6 months",
+        "userId": 2,
+        "gender": "boy"
+    },
+    {
+        "id": 3,
+        "breed": "Poodle",
+        "isAdopted": false,
+        "description": "Very cute dog!",
+        "color": "black",
+        "age": "2 months",
+        "userId": 3,
+        "gender": "boy"
+    },
+    {
+        "id": 4,
+        "breed": "Chihuahua",
+        "isAdopted": false,
+        "description": "Small and cute dog!",
+        "color": "blonde",
+        "age": "7 months",
+        "userid": 4,
+        "gender": "boy"
+    },
+    {
+        "id": 5,
+        "breed": "French Bulldog",
+        "isAdopted": false,
+        "description": null,
+        "color": "black",
+        "age": "9 months",
+        "userid": 5,
+        "gender": "boy"
+    },
+    {
+        "id": 6,
+        "breed": "Husky",
+        "isAdopted": false,
+        "description": "Beautiful and intelligent dog!",
+        "color": "grey and white",
+        "age": "1 year",
+        "userid": 6,
+        "gender": "girl"
+    },
+    {
+        "id": 7,
+        "breed": "Shih Tzu",
+        "isAdopted": false,
+        "description": null,
+        "color": "black",
+        "age": "2 months",
+        "userid": 7,
+        "gender": "girl"
+    },
+    {
+        "id": 8,
+        "breed": "Shiba Inu",
+        "isAdopted": false,
+        "description": "Beautiful dog",
+        "color": "blonde",
+        "age": "1.5 years",
+        "userid": 8,
+        "gender": "girl"
+    },
+    {
+        "id": 9,
+        "breed": "Dobermann",
+        "isAdopted": false,
+        "description": "Smart and large doge",
+        "color": "black",
+        "age": "6 months",
+        "userid": 9,
+        "gender": "girl"
+    },
+    {
+        "id": 10,
+        "breed": "Bichon Frise",
+        "isAdopted": false,
+        "description": "Very cute dog",
+        "color": "white",
+        "age": "2 months",
+        "userid": 10,
+        "gender": "girl"
+    }
+]

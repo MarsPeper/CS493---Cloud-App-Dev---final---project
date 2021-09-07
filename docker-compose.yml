@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  mongo-server:
+    image: mongo:latest
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - final-vol:/data/db
+      - ./db-init/:/docker-entrypoint-initdb.d
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD : ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
+    networks:
+      - final-net
+
+volumes:
+  final-vol:
+
+networks:
+  final-net:
+
+# docker run -d --name mongo-server --network final-net -v final-vol:/data/db -p "27017:27017" -e "MONGO_INITDB_ROOT_USERNAME=root"  -e "MONGO_INITDB_ROOT_PASSWORD=hunter2" mongo:latest
+# docker run --rm -it --network final-net mongo:latest mongo --host mongo-server --username root --password hunter2 --authenticationDatabase admin
+# docker run -d --name redis-server -p 6379:6379 redis:latest
